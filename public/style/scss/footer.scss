@@ -1,0 +1,212 @@
+/*================================
+=            PAGE FOOTER         =
+================================*/
+
+footer {
+    padding: 60px 0 40px 0;
+    background-color: $colorPrimary_1;
+
+    .container-f {
+        display: flex;
+        flex-direction: column;
+        @include styleGrid("width", 10);
+        @include styleGrid("margin", 1, 1, "left");
+
+        .container-img {
+            @include styleGrid("width", 2, 2);
+            margin-bottom: 50px;
+        }
+
+        .container-link {
+            display: flex;
+
+            .container-product,
+            .container-unlimitd,
+            .container-ressource {
+                display: flex;
+                flex-direction: column;
+
+                h5 {
+                    margin-bottom: 17px;
+                    @include styleH("h5", $color:$colorGreyscale_5);
+                }
+
+                a {
+                    margin-bottom: 16px;
+                    @include styleA("big", $color: $colorGreyscale_5, $font: $font_1_regular);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .container-product {
+                margin-right: 55px;
+                @include styleGrid("width", 2);
+            }
+
+            .container-unlimitd {
+                margin-right: 50px;
+                @include styleGrid("width", 2);
+            }
+
+            .container-ressource {
+                margin-right: 68px;
+            }
+
+            .container-newsletter {
+                @include styleGrid("width", 3);
+
+                h5 {
+                    margin-bottom: 17px;
+                    @include styleH("h5", $color:$colorGreyscale_5);
+                }
+
+                p {
+                    @include styleP("tiny", $color:$colorGreyscale_5);
+
+                    &:first-of-type {
+                        opacity: 0.8;
+                        margin-bottom: 16px;
+                        @include styleP("small", $color:$colorGreyscale_5);
+                    }
+
+                    &:last-child {
+                        margin-top: 2px;
+
+                        a {
+                            color: $colorGreyscale_5;
+                        }
+                    }
+                }
+
+                .btn {
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 9px 20px;
+                    margin-bottom: 40px;
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border-radius: 70px;
+
+                    p {
+                        opacity: 1;
+                        margin-bottom: 0;
+
+                        &:first-of-type {
+                            margin-right: 159px;
+                        }
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+
+                        .line {
+                            height: 22px;
+                            margin-right: 12px;
+                            border: 0.5px solid rgba(255, 255, 255, 0.5);
+                        }
+
+                        h6 {
+                            cursor: pointer;
+                            @include styleH("h6", $color:$colorGreyscale_5);
+                            line-height: 0;
+                        }
+                    }
+
+                }
+
+                .container-sn {
+                    display: flex;
+
+                    .img-sn {
+                        height: 20px;
+                        @include styleGrid("width", 1, 1);
+                        @include styleGrid("margin", 1, 0, "left");
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+
+        .btn-lang {
+            height: 40px;
+            width: 118px;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 60px;
+
+            a:first-child {
+                margin-bottom: 0;
+                margin-right: 22px;
+                @include styleA("small", $color: $colorGreyscale_5, $font: $font_1_regular);
+            }
+        }
+    }
+}
+
+/*----------  RESPONSIBLE  ----------*/
+
+@media screen and (max-width: $breakPoint_mobile) {
+    footer {
+        .container-f {
+            width: 100%;
+            margin-left: 0;
+
+            .container-img {
+                width: 206px;
+            }
+
+            .container-link {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 24px;
+
+                .container-product,
+                .container-unlimitd,
+                .container-ressource,
+                .container-newsletter {
+                    width: unset;
+                    margin: 0;
+
+                    a {
+                        font-size: 16;
+                        line-height: 120%;
+
+                        &:last-of-type {
+                            font-size: unset;
+                        }
+                    }
+                }
+
+                .container-product {
+                    margin-bottom: 50px;
+                }
+
+                .container-ressource {
+                    margin-bottom: 32px;
+                }
+
+                .container-newsletter {
+                    .btn {
+                        div {
+                            h6 {
+                                line-height: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*====================================
+=            END PAGE FOOTER         =
+====================================*/
