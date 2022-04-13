@@ -7,7 +7,7 @@ $footer = $WPGLOBAL['footer']->data;
     <div class="wrapper">
         <div class="container-f">
             <div class="container-img">
-                <img src="img/logo-f.svg" alt="">
+                <img src="/img/logo-f.svg" alt="">
             </div>
             <div class="container-link">
                 <div class="container-product">
